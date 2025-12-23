@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russian Work Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1>🗓️ Russian Work Calendar</h1>
+                    <p class="subtitle">Work Days & Holidays</p>
+                </div>
+                <button id="darkModeToggle" class="dark-mode-btn" title="Toggle Dark Mode">🌙</button>
+            </div>
+        </header>
+
+        <div class="search-section">
+            <h3>🔍 Search Date</h3>
+            <div class="search-inputs">
+                <input type="number" id="searchYear" placeholder="Year" min="1900" max="2100" value="2025">
+                <select id="searchMonth">
+                    <option value="">All Months</option>
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+                <input type="number" id="searchDay" placeholder="Day" min="1" max="31">
+                <button id="searchBtn" class="btn">Search</button>
+                <button id="clearSearch" class="btn btn-secondary">Clear</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prevYear" class="btn">◀ Previous Year</button>
+            <div class="year-display">
+                <span id="currentYear">2025</span>
+            </div>
+            <button id="nextYear" class="btn">Next Year ▶</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalDays">365</div>
+                <div class="stat-label">Total Days</div>
+            </div>
+            <div class="stat-card workday">
+                <div class="stat-number" id="workDays">247</div>
+                <div class="stat-label">Work Days</div>
+            </div>
+            <div class="stat-card weekend">
+                <div class="stat-number" id="weekendDays">104</div>
+                <div class="stat-label">Weekends</div>
+            </div>
+            <div class="stat-card holiday">
+                <div class="stat-number" id="holidayDays">14</div>
+                <div class="stat-label">Holidays</div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-color workday"></span>
+                <span>Work Day</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color weekend"></span>
+                <span>Weekend</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color holiday"></span>
+                <span>Holiday</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color short-day"></span>
+                <span>Short Day</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color today"></span>
+                <span>Today</span>
+            </div>
+        </div>
+
+        <div id="calendar" class="calendar-grid"></div>
+
+        <footer>
+            <p>Russian Work Calendar • Data based on official calendar</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
